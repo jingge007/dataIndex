@@ -1,0 +1,13 @@
+CSS控制文字，超出部分显示省略号：
+
+ overflow: hidden;
+ text-overflow:ellipsis;
+ white-space: nowrap;
+
+
+CSS文字与文字距离间距：
+
+ letter-spacing:15px;
+
+
+ css阻止a标签产生点击事件：pointer-events: none;

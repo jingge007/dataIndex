@@ -1,0 +1,63 @@
+git的初始化：git init
+
+配置用户名：git config --global user.name "huangjing"
+配置邮箱：git config --global user.email "huangjing@163.com"
+
+添加所有的修改文件：git add ./
+
+对添加文件的说明：git commit -m "这是对这次添加的东西的说明" 
+
+把所有修改的文件提交到版本库：git commit --all -m "一些说明"
+
+
+查看当前代码有没有被放到仓储中：git status
+
+查看历史提交的日志：git log
+
+可以看到简洁版的日志：git log --oneline
+
+回退到指定的版本：git reset --hard [版本号]
+
+看到所有提交的版本号：git reflog
+
+创建了一个dev分支：git branch dev
+
+切换分支：git checkout dev
+
+合并分支：git merge dev
+
+
+git中的忽略文件上传：
+gitignore,在这个文件中可以设置要被忽略的文件或者目录。
+忽略文件上传的步骤：
+1.新建 .gitignore文件，创建.gitignore文件的命令：touch .gitignore 
+
+2.打开.gitignore文件，在.gitignore文件中写上要忽略的文件：
+例如：忽略 
+/.idea  
+/.gitignore
+
+
+
+把本地的项目上传到GitHub的步骤：
+先在GitHub上新建一个版本库
+
+<1>输入git config --global user.name "你的用户名" 
+
+<2>输入git config --global user.email "你的邮箱" 
+
+<3>输入git init 
+
+<4>输入git remote add origin 你刚才建立的项目连接 
+
+<5>输入git add . 
+
+<6>输入git commit -m "这是对这次添加的东西的说明" 
+
+<8>输入git push -u origin master 将代码推送到gitlab端
+
+
+
+
+
+

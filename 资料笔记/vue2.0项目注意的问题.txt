@@ -1,0 +1,98 @@
+vue2.0项目创建的步骤：
+1. npm install -g cnpm --registry=https://registry.npm.taobao.org
+
+2. cnpm install -g vue-cli
+
+3. vue init webpack 项目的名称
+
+4. cnpm install
+
+5. npm run dev
+
+使用 npm run build 命令生成上线目录（部署）
+
+使用vue -V 查看是否安装成功
+
+修改router-link点击时默认的添加的类名： linkActiveClass: 'active'
+
+vue.js的路由地址会以#号分隔,解决的方法是开启HTML5 History 模式：  mode: 'history'
+
+安装使用预编译语言stylus： cnpm install stylus stylus-loader  --save-dev
+
+vue-resource的安装： cnpm install vue-resource --save
+
+axios的安装：cnpm install axios --save
+
+axios在vue的全局配置：Vue.prototype.$axios = axios
+
+在 Vue.js 中，父子组件的关系可以总结为 props down, events up 。
+父组件通过 props 向下传递数据给子组件，子组件通过 events 给父组件发送消息。
+
+<style lang="stylus" rel="stylesheet/stylus" type="text/stylus">
+
+</style>
+
+使用重定向redirect 实现路由的自动默认跳转：
+例：
+        routes[
+              {path:'/',redirect:'/goods',component:goods},
+	{path:'/goods',component:goods}
+             ]
+
+
+eslintrc.js的配置
+
+'no-multiple-empty-lines': ['error', {
+      max: 2,
+      maxEOF: 2,
+      maxBOF: 2
+    }],
+    'space-before-function-paren':0,
+    'semi':0,
+    'no-new':0,
+    'no-unused-vars':0,
+    'no-undef':0
+
+
+
+'space-before-function-paren':0,
+'eol-last':0
+
+
+ // 配置别名
+
+ 'common': resolve('src/common'),
+      'components': resolve('src/components'),
+      'base': resolve('src/base')
+
+
+基于vue-cli配置移动端自适应：
+
+ 安装 lib-flexible：cnpm install lib-flexible --save
+
+ 在项目入口文件 main.js 里 引入 lib-flexible: import 'lib-flexible'
+
+ 安装 px2rem-loader: cnpm install px2rem-loade --save
+
+ 在build/utils.js 文件中进行配置：
+  // utils.js
+var cssLoader = {
+  loader: 'css-loader',
+  options: {
+    minimize: process.env.NODE_ENV === 'production',
+    sourceMap: options.sourceMap
+  }
+}
+var px2remLoader = {
+  loader: 'px2rem-loader',
+  options: {
+    remUnit: 75   //remUnit 选项意思是 1rem=多少像素
+  }
+}
+
+ // utils.js
+function generateLoaders(loader, loaderOptions) {
+  var loaders = [cssLoader, px2remLoader]
+
+
+
